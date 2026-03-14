@@ -71,7 +71,7 @@ uploaded_file = st.file_uploader(
 if uploaded_file is not None:
     # Image preview
     image = Image.open(uploaded_file)
-    st.image(image, caption="Uploaded Image", width=None)  # width=None = full width
+    st.image(image, caption="Uploaded Image", use_column_width=True)  # width=None = full width
     
     with st.spinner("AI model se check kar raha hoon... (pehli baar thoda time lagega)"):
         # Predict
